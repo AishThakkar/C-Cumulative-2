@@ -9,8 +9,8 @@ namespace C__Cumulative_2.Models
 {
     public class CumulativeProjectDb
     {
-        //These are readonly "secret" properties.
-        //Only the CumulativeProjectDb class can use them.
+        
+        
         private static string User { get { return "root"; } }
 
         private static string Password { get { return "root"; } }
@@ -22,7 +22,7 @@ namespace C__Cumulative_2.Models
         private static string Port { get { return "3306"; } }
 
 
-        //ConnectionString is a series of credentials used to connect to the database.
+       
         protected static string ConnectionString
         {
             get
@@ -36,17 +36,9 @@ namespace C__Cumulative_2.Models
         }
 
         //This method we use to connect to the databse.
-        /// <summary>
-        /// Returns a connection to the project databse.
-        /// </summary>
-        /// <example>
-        /// Private CumulativeProject Project = new CumulativeProject();
-        /// MySqlConnection Conn =  Project.AccessDatabase();
-        /// </example>
-        /// <returns>A My SqlConnection Object</returns>
         public MySqlConnection AccessDatabase()
         {
-            //In this step we are instantiating class.
+            //instantiating class.
             return new MySqlConnection(ConnectionString);
         }
     }
